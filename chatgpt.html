@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <table id="color-table">
+        <tr>
+            <td class="color-cell" data-color="#ff0000">#ff0000</td>
+            <td class="color-cell" data-color="#00ff00">#00ff00</td>
+            <td class="color-cell" data-color="#0000ff">#0000ff</td>
+        </tr>
+        <tr>
+            <td class="color-cell" data-color="#ffff00">#ffff00</td>
+            <td class="color-cell" data-color="#00ffff">#00ffff</td>
+            <td class="color-cell" data-color="#ff00ff">#ff00ff</td>
+        </tr>
+    </table>
+    <script>
+        const colorCells = document.querySelectorAll(".color-cell");
+
+        for (const cell of colorCells) {
+            cell.addEventListener("mouseover", function () {
+                this.style.backgroundColor = this.getAttribute("data-color");
+            });
+
+            cell.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "";
+            });
+        }
+    </script>
+</body>
+
+</html>

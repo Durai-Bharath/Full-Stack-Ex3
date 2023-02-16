@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Question-1
+    </title>
+    <style>
+        #t2 {
+            width: 20%;
+            height: 75px;
+            margin-left: 40%;
+            margin-top: 100px;
+            border: 1px solid black;
+
+        }
+
+        #t1 {
+            width: 100%;
+            margin-top: 175px;
+        }
+
+        td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #DDD;
+        }
+
+        /* tr:hover {
+            background-color: #D6EEEE;
+        } */
+    </style>
+</head>
+
+<body>
+    <table id="t2">
+        <tr>
+            <td id="colors"></td>
+        </tr>
+    </table>
+    <table id="t1" border="3">
+        <tr>
+            <td id="d" value="red" color="#FF0000">#FF0000</td>
+            <td id="d" value="blue" color="#0000ff">#FF0000</td>
+            <td id="d" value="green" color="#3cb371">#FF0000</td>
+            <td id="d" value="pink" color="#ee82ee">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="d" value="yellow" color="#ffa500">#FF0000</td>
+            <td id="d" value="violet" color="#6a5acd">#FF0000</td>
+            <td id="d" value="black" color="#3c3c3c">#FF0000</td>
+            <td id="d" value="light blue" color="#94b2d6">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+            <td id="d" value="black" color="#FF0000">#FF0000</td>
+        </tr>
+    </table>
+    <script lang="javascript">
+        const cell = document.querySelectorAll("#d");
+        const val = document.getElementById("colors");
+
+        for (const c of cell) {
+            c.addEventListener("mouseover", function () {
+                this.style.backgroundColor = this.getAttribute("color");
+                val.innerHTML = this.getAttribute("value");
+            });
+
+            c.addEventListener("mouseout", function () {
+                this.style.backgroundColor = "";
+                val.innerHTML = "";
+            });
+        }
+        // function color(id) {
+        //     var text;
+        //     var try2;
+            // var a = "jnd";
+            // var b = "jnd";
+            // if(a == "jnd")
+            // {
+            //     console.log("hi");
+            // }
+            // try1 = document.getElementById("colors")
+            //     try1.innerHTML=text;
+            // if(id == "d1") {
+            //     var try1;
+            //     text="Black";
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+            // } else if(id == "d2") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // }
+            // else if(id == "d3") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+
+            // } else if(id == "d4") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d5") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d6") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d7") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d8") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d9") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d10") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d11") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d12") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d13") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d14") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d15") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // } else if(id == "d16") {
+            //     text="Black";
+            //     var try1;
+            //     id.style.backgroundColor="green";
+            //     try1 = document.getElementById("colors");
+            //     try1.innerHTML=text;
+            //     try1.style.backgroundColor="green";
+
+
+            // }
+            // else{
+            //     break;
+            // }
+
+
+            // function empty(id){
+            //     id.style.backgroundColor="";
+            //     try2 = document.getElementById("colors");
+            //     try2.style.backgroundColor="";
+            // }
+            // text = id;
+            // document.getElementById("colors").innerHTML=text;
+    </script>
+</body>
+
+</html>

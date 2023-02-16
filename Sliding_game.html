@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sliding Game</title>
+        <style>
+            table{
+                margin-top: 200px;
+                transform: translateX(600px);
+                height: 50px;
+                width: 30px;
+
+            }
+            tr,td{
+                border: 1px solid rgb(193, 45, 45);
+            }
+            td{
+                padding: 20px;
+
+            }
+            td:hover{
+                background-color: yellow;
+                box-shadow: 10px 5px lightblue;
+            }
+        </style>
+    </head>
+    <body onload="generate(this)">
+        <table id="table" style="font-weight:15px;text-align: center;" cellspacing="0">
+        </table>
+    </body>
+    <script>
+        var pos;
+        function generate()
+        {
+            const t=document.getElementById("table");
+            var arr=[];
+            var table="";
+            var even=[0,2,4,6,8,10,12,14];
+            var odd=[1,3,5,7,9,11,13,15];
+            var count=0;
+            for(var i=0;i<4;i++)
+            {
+                var tabrow='<tr>';
+                for(j=0;j<4;j++)
+                {
+                    var rand;
+                    while(1)
+                    {
+                        var e;
+                        rand=Math.floor(Math.random() * 8);
+                        console.log(rand);
+                        if((count)%2==0)
+                        {
+                            e=even[rand];
+                           if(!arr.includes(e))
+                           {
+                            arr.push(e);
+                            break;
+                           }
+
+                        }
+                        else{
+                            e=odd[rand];
+                            if(!arr.includes(e))
+                            {
+                            
+                                arr.push(e);
+                                break;
+                            }
+                        }
+                        // if(!arr.includes(rand))
+                        // {
+                        //     if(rand%2==0){
+
+                        //     }
+                        //     arr.push(rand);
+                        //     break;
+                        // }
+                    }
+                    if(e==0)
+                    {
+                        e="";
+                        pos=arr.length-1;
+                    }
+                    var tabcols=`<td id="${count++}" onclick="slide(this)">${e}</td>`;
+                    tabrow+=tabcols;
+                }
+                tabrow+='</tr>';
+                table+=tabrow;
+            }
+            t.innerHTML=table;
+        }
+        function slide(elem)
+        {
+            console.log(pos);
+            let current=parseInt(elem.id);
+            console.log(current);
+            if(current+4==pos||current-4==pos||current+1==pos||current-1==pos)
+            {
+                document.getElementById(pos.toString()).innerHTML=elem.innerHTML;
+                elem.innerHTML="";
+                pos=current;
+            }
+        }
+    </script>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Question-1
+    </title>
+    <style>
+        #t2 {
+            width: 20%;
+            height: 75px;
+            margin-left: 40%;
+            margin-top: 100px;
+            border: 1px solid black;
+
+        }
+
+        #t1 {
+            width: 100%;
+            margin-top: 175px;
+        }
+
+        td {
+            padding: 8px;
+            text-align: center;
+            border: 1px solid #DDD;
+        }
+
+        /* tr:hover {
+            background-color: #D6EEEE;
+        } */
+    </style>
+</head>
+
+<body>
+    <table id="t2">
+        <tr>
+            <td id="colors"></td>
+        </tr>
+    </table>
+    <table id="t1" border="3">
+        <tr>
+            <td id="1" value="red" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="2" value="blue" color="#0000ff" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="3" value="green" color="#3cb371" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="4" value="pink" color="#ee82ee" onmousedown="myfunc(this)">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="5" value="yellow" color="#ffa500" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="6" value="violet" color="#6a5acd" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="7" value="black" color="#3c3c3c" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="8" value="light blue" color="#94b2d6" onmousedown="myfunc(this)">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="9" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="10" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="11" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="12" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+        </tr>
+        <tr>
+            <td id="13" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="14" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="15" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+            <td id="16" value="black" color="#FF0000" onmousedown="myfunc(this)">#FF0000</td>
+        </tr>
+    </table>
+    <script lang="javascript">
+        // const cell = document.querySelectorAll("#d");
+        const val = document.getElementById("colors");
+        var num;
+        var str;
+        var cell;
+        // for (const c of cell) {
+        //     c.addEventListener("mouseover", function () {
+        //         this.style.backgroundColor = this.getAttribute("color");
+        //         val.innerHTML = this.getAttribute("value");
+        //     });
+
+        //     c.addEventListener("mouseout", function () {
+        //         this.style.backgroundColor = "";
+        //         val.innerHTML = "";
+        //     });
+        // }
+        function myfunc(e){
+            // e.style.backgroundColor = "red";
+            str = e.id;
+            num = parseInt(str);
+            if(num % 2 == 0){
+                for(var i=1;i<=16;i=i+2)
+                {
+                    document.getElementById(i.toString()).style.backgroundColor ="blue";
+                    val.innerHTML = "Even";
+                    document.getElementById(num.toString()).addEventListener("mouseup",function(){
+                        for(var k=1;k<=16;k=k+2){
+                            document.getElementById(k.toString()).style.backgroundColor="";
+                        }
+                    });
+                }
+            }
+            else{
+                for(var i=2;i<=16;i=i+2)
+                {
+                    document.getElementById(i.toString()).style.backgroundColor ="yellow";
+                    val.innerHTML = "odd";
+                    document.getElementById(num.toString()).addEventListener("mouseup",function(){
+                        for(var k=2;k<=16;k=k+2){
+                            document.getElementById(k.toString()).style.backgroundColor="";
+                        }
+                    });
+
+                }
+            }
+        //     for(var j=1;j<=16;j++){
+        //     cell = document.querySelector(j.toString());
+        //     cell.addEventListener("mouseup",function(){
+        //         this.style.backgroundColor="";
+        //         this.innerHTML="";
+        //     })
+        // }
+        }
+        // for(var j=1;j<=16;j++){
+        //     cell = document.querySelector(j.toString());
+        //     cell.addEventListener("mouseup",function(){
+        //         this.style.backgroundColor="";
+        //         this.innerHTML="";
+        //     })
+        // }
+        
+        
+        </script>
+</body>
+
+</html>

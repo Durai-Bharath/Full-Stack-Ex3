@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pop-up Blocker</title>
+</head>
+<body>
+    <script>
+        const popUp = () =>{
+            let popup = window.open(null,'','width=100px','height=100px')
+            try {
+                popup.close()
+                return false;
+            } catch (error) {
+                return true
+            }
+        }
+        if (popUp()) {
+            document.writeln("<h1>Popup blocker is available</h1>")
+        } else {
+            document.writeln("<h1>Popup blocker not available</h1>")
+        }
+    </script>
+</body>
+</html>
